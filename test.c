@@ -5,17 +5,18 @@
 char *fun[] = {"sin","cos","tan","asin","acos","atan","sinh","cosh","tanh","sqrt","log","log10","exp","floor","ceil","fabs","pow","atan2","fmode","frexp","idexp"};
 int main(int argc,char *argv[]){
 	if(argc != 2) {
-		printf("Invalid argument\n");
+		printf("INVALID ARGUMENT \n");
 		return 1;
 	}
 	if(strcmp(argv[1],"-h")==0) {
-		printf("usage : ./project filename.txt");
+		printf("usage : ./project filename.txt\n");
 		return 1;
 	}
 	FILE *fp;
 	fp = fopen(argv[1],"r");
 	if (fp == NULL) {
-		printf("OPEN FAILED\n");
+		printf("OPEN FAILED : ENTER EXISTING FILE NAME \n");
+		return 1;
 	}
 	char name[50];
 	double t;
