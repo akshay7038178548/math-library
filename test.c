@@ -5,7 +5,11 @@
 char *fun[] = {"sin","cos","tan","asin","acos","atan","sinh","cosh","tanh","sqrt","log","log10","exp","floor","ceil","fabs","pow","atan2","fmode","frexp","idexp"};
 int main(int argc,char *argv[]){
 	if(argc != 2) {
-		printf("usage : Invalid argument");
+		printf("Invalid argument\n");
+		return 1;
+	}
+	if(strcmp(argv[1],"-h")==0) {
+		printf("usage : ./project filename.txt");
 		return 1;
 	}
 	FILE *fp;
